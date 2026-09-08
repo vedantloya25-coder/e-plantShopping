@@ -5,9 +5,9 @@ import {
   selectCartItems,
   selectTotalQuantity,
   selectTotalPrice,
-  increaseQuantity,
-  decreaseQuantity,
-  removeFromCart,
+  addItem,
+  removeItem,
+  updateQuantity,
   clearCart
 } from '../redux/CartSlice';
 import Navbar from './Navbar';
@@ -40,20 +40,20 @@ export const SingleCartItem = ({ item }) => {
   const dispatch = useDispatch();
 
   const handleIncrement = () => {
-    dispatch(increaseQuantity(item.id));
+    dispatch(updateQuantity({ id: item.id, type: 'increment' }));
   };
 
   const handleDecrement = () => {
     if (item.quantity > 1) {
-      dispatch(decreaseQuantity(item.id));
+      dispatch(updateQuantity({ id: item.id, type: 'decrement' }));
     } else {
       // Remove when quantity would drop below 1
-      dispatch(removeFromCart(item.id));
+      dispatch(removeItem(item.id));
     }
   };
 
   const handleDelete = () => {
-    dispatch(removeFromCart(item.id));
+    dispatch(removeItem(item.id));
   };
 
   // Use named helper function to compute item total cost

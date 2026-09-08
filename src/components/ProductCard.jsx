@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addToCart, selectCartItems } from '../redux/CartSlice';
+import { addItem, selectCartItems } from '../redux/CartSlice';
 import { ShoppingBag, Check } from 'lucide-react';
 
 const ProductCard = ({ plant }) => {
@@ -12,7 +12,7 @@ const ProductCard = ({ plant }) => {
 
   const handleAddToCart = () => {
     if (!isAdded) {
-      dispatch(addToCart(plant));
+      dispatch(addItem(plant));
     }
   };
 
