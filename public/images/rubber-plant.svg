@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+      <defs>
+        <linearGradient id="rpBg" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#ECEFF1"/>
+          <stop offset="100%" stop-color="#CFD8DC"/>
+        </linearGradient>
+        <linearGradient id="burgundyLeaf" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#3E2723"/>
+          <stop offset="50%" stop-color="#1B5E20"/>
+          <stop offset="100%" stop-color="#0E2E10"/>
+        </linearGradient>
+        <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+          <feDropShadow dx="0" dy="8" stdDeviation="6" flood-opacity="0.15"/>
+        </filter>
+      </defs>
+      <rect width="400" height="400" rx="24" fill="url(#rpBg)"/>
+      <ellipse cx="200" cy="360" rx="80" ry="12" fill="#000000" opacity="0.1"/>
+      <!-- Thick Stem -->
+      <path d="M200,260 Q195,160 200,60" stroke="#3E2723" stroke-width="12" stroke-linecap="round"/>
+      <!-- Emerging Red Sheath Spire -->
+      <polygon points="196,70 200,30 204,70" fill="#D32F2F"/>
+      <!-- Glossy Broad Oval Leaves -->
+      <g filter="url(#shadow)">
+        <!-- Top Leaf -->
+        <ellipse cx="160" cy="90" rx="35" ry="22" transform="rotate(-25 160 90)" fill="url(#burgundyLeaf)"/>
+        <path d="M195,95 Q160,90 130,80" stroke="#C62828" stroke-width="2.5" fill="none"/>
+        <ellipse cx="240" cy="110" rx="36" ry="23" transform="rotate(25 240 110)" fill="url(#burgundyLeaf)"/>
+        <path d="M200,115 Q240,110 270,105" stroke="#C62828" stroke-width="2.5" fill="none"/>
+        <!-- Mid Leaves -->
+        <ellipse cx="140" cy="150" rx="42" ry="26" transform="rotate(-30 140 150)" fill="url(#burgundyLeaf)"/>
+        <path d="M195,155 Q140,150 105,140" stroke="#C62828" stroke-width="3" fill="none"/>
+        <ellipse cx="260" cy="170" rx="42" ry="26" transform="rotate(30 260 170)" fill="url(#burgundyLeaf)"/>
+        <path d="M200,175 Q260,170 295,160" stroke="#C62828" stroke-width="3" fill="none"/>
+      </g>
+      <!-- Sleek White Matte Pot -->
+      <g filter="url(#shadow)">
+        <polygon points="140,250 260,250 245,345 155,345" fill="#FFFFFF"/>
+        <ellipse cx="200" cy="250" rx="60" ry="11" fill="#ECEFF1"/>
+        <ellipse cx="200" cy="250" rx="52" ry="7" fill="#212121"/>
+        <rect x="135" y="242" width="130" height="14" rx="5" fill="#EEEEEE"/>
+      </g>
+    </svg>

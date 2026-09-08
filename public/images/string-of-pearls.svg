@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+      <defs>
+        <linearGradient id="sopBg" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#E8F5E9"/>
+          <stop offset="100%" stop-color="#C8E6C9"/>
+        </linearGradient>
+        <linearGradient id="pearlGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#81C784"/>
+          <stop offset="100%" stop-color="#2E7D32"/>
+        </linearGradient>
+        <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+          <feDropShadow dx="0" dy="8" stdDeviation="6" flood-opacity="0.15"/>
+        </filter>
+      </defs>
+      <rect width="400" height="400" rx="24" fill="url(#sopBg)"/>
+      <!-- Hanging String Lines -->
+      <line x1="200" y1="20" x2="140" y2="140" stroke="#795548" stroke-width="2.5"/>
+      <line x1="200" y1="20" x2="260" y2="140" stroke="#795548" stroke-width="2.5"/>
+      <line x1="200" y1="20" x2="200" y2="140" stroke="#795548" stroke-width="2.5"/>
+      <circle cx="200" cy="20" r="6" fill="#5D4037"/>
+      <!-- Hanging Pot -->
+      <g filter="url(#shadow)">
+        <polygon points="140,140 260,140 240,210 160,210" fill="#D7CCC8"/>
+        <ellipse cx="200" cy="140" rx="60" ry="10" fill="#EFEBE9"/>
+        <ellipse cx="200" cy="140" rx="52" ry="7" fill="#4E342E"/>
+      </g>
+      <!-- Cascading Tendrils & Round Green Beads -->
+      <!-- Vine 1 -->
+      <path d="M160,160 Q130,220 150,330" stroke="#388E3C" stroke-width="2.5" fill="none"/>
+      <circle cx="155" cy="180" r="7" fill="url(#pearlGrad)"/>
+      <circle cx="145" cy="210" r="8" fill="url(#pearlGrad)"/>
+      <circle cx="140" cy="245" r="8" fill="url(#pearlGrad)"/>
+      <circle cx="143" cy="280" r="7" fill="url(#pearlGrad)"/>
+      <circle cx="148" cy="315" r="6" fill="url(#pearlGrad)"/>
+      <!-- Vine 2 Center Left -->
+      <path d="M185,160 Q170,240 180,360" stroke="#388E3C" stroke-width="2.5" fill="none"/>
+      <circle cx="180" cy="185" r="7" fill="url(#pearlGrad)"/>
+      <circle cx="175" cy="220" r="8" fill="url(#pearlGrad)"/>
+      <circle cx="172" cy="260" r="8" fill="url(#pearlGrad)"/>
+      <circle cx="174" cy="300" r="7" fill="url(#pearlGrad)"/>
+      <circle cx="178" cy="340" r="6" fill="url(#pearlGrad)"/>
+      <!-- Vine 3 Center Right -->
+      <path d="M215,160 Q230,240 215,350" stroke="#388E3C" stroke-width="2.5" fill="none"/>
+      <circle cx="220" cy="185" r="7" fill="url(#pearlGrad)"/>
+      <circle cx="226" cy="225" r="8" fill="url(#pearlGrad)"/>
+      <circle cx="225" cy="265" r="8" fill="url(#pearlGrad)"/>
+      <circle cx="220" cy="305" r="7" fill="url(#pearlGrad)"/>
+      <circle cx="216" cy="335" r="6" fill="url(#pearlGrad)"/>
+      <!-- Vine 4 Right -->
+      <path d="M240,160 Q270,230 250,320" stroke="#388E3C" stroke-width="2.5" fill="none"/>
+      <circle cx="248" cy="180" r="7" fill="url(#pearlGrad)"/>
+      <circle cx="258" cy="215" r="8" fill="url(#pearlGrad)"/>
+      <circle cx="260" cy="250" r="8" fill="url(#pearlGrad)"/>
+      <circle cx="255" cy="285" r="7" fill="url(#pearlGrad)"/>
+      <circle cx="250" cy="310" r="6" fill="url(#pearlGrad)"/>
+    </svg>

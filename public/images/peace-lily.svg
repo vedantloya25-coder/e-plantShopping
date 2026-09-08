@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+      <defs>
+        <linearGradient id="plBg" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#E0F2F1"/>
+          <stop offset="100%" stop-color="#B2DFDB"/>
+        </linearGradient>
+        <linearGradient id="plPot" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#ECEFF1"/>
+          <stop offset="50%" stop-color="#FFFFFF"/>
+          <stop offset="100%" stop-color="#CFD8DC"/>
+        </linearGradient>
+        <linearGradient id="plLeaf" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#1B5E20"/>
+          <stop offset="100%" stop-color="#0B3C11"/>
+        </linearGradient>
+        <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+          <feDropShadow dx="0" dy="8" stdDeviation="6" flood-opacity="0.15"/>
+        </filter>
+      </defs>
+      <rect width="400" height="400" rx="24" fill="url(#plBg)"/>
+      <ellipse cx="200" cy="360" rx="80" ry="12" fill="#000000" opacity="0.1"/>
+      <!-- Arching Leaves -->
+      <path d="M200,260 Q120,220 90,150 Q130,130 200,260 Z" fill="url(#plLeaf)"/>
+      <path d="M200,260 Q280,220 310,150 Q270,130 200,260 Z" fill="url(#plLeaf)"/>
+      <path d="M200,260 Q150,180 130,100 Q180,120 200,260 Z" fill="url(#plLeaf)"/>
+      <path d="M200,260 Q250,180 270,100 Q220,120 200,260 Z" fill="url(#plLeaf)"/>
+      <path d="M200,260 Q190,160 170,70 Q210,90 200,260 Z" fill="url(#plLeaf)"/>
+      <!-- Flower Stems & White Spathes -->
+      <path d="M200,260 Q195,140 215,60" stroke="#4CAF50" stroke-width="4" fill="none"/>
+      <!-- White Bloom 1 -->
+      <g filter="url(#shadow)" transform="translate(215, 60)">
+        <path d="M0,20 C-25,-10 -20,-50 0,-70 C20,-50 25,-10 0,20 Z" fill="#FFFFFF" stroke="#E0E0E0" stroke-width="1.5"/>
+        <path d="M0,15 L0,-45" stroke="#FFF9C4" stroke-width="6" stroke-linecap="round"/>
+        <circle cx="0" cy="-45" r="3" fill="#FDD835"/>
+      </g>
+      <!-- Flower Stem 2 -->
+      <path d="M200,260 Q160,160 145,100" stroke="#4CAF50" stroke-width="3.5" fill="none"/>
+      <!-- White Bloom 2 -->
+      <g filter="url(#shadow)" transform="translate(145, 100) rotate(-20)">
+        <path d="M0,15 C-20,-5 -15,-40 0,-55 C15,-40 20,-5 0,15 Z" fill="#FFFFFF" stroke="#E0E0E0" stroke-width="1.5"/>
+        <path d="M0,10 L0,-35" stroke="#FFF9C4" stroke-width="5" stroke-linecap="round"/>
+      </g>
+      <!-- Ceramic Pot -->
+      <g filter="url(#shadow)">
+        <polygon points="140,250 260,250 245,345 155,345" fill="url(#plPot)"/>
+        <ellipse cx="200" cy="250" rx="60" ry="11" fill="#ECEFF1"/>
+        <ellipse cx="200" cy="250" rx="52" ry="7" fill="#4E342E"/>
+        <rect x="135" y="242" width="130" height="14" rx="5" fill="#CFD8DC"/>
+      </g>
+    </svg>

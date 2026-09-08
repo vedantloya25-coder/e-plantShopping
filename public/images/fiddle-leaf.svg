@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+      <defs>
+        <linearGradient id="flBg" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#F3E5F5"/>
+          <stop offset="100%" stop-color="#E8EAF6"/>
+        </linearGradient>
+        <linearGradient id="flLeaf" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#33691E"/>
+          <stop offset="100%" stop-color="#1B5E20"/>
+        </linearGradient>
+        <linearGradient id="flPot" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#A1887F"/>
+          <stop offset="50%" stop-color="#BCAAA4"/>
+          <stop offset="100%" stop-color="#8D6E63"/>
+        </linearGradient>
+        <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+          <feDropShadow dx="0" dy="8" stdDeviation="6" flood-opacity="0.15"/>
+        </filter>
+      </defs>
+      <rect width="400" height="400" rx="24" fill="url(#flBg)"/>
+      <ellipse cx="200" cy="365" rx="85" ry="12" fill="#000000" opacity="0.1"/>
+      <!-- Woody Stem -->
+      <path d="M200,260 Q195,160 200,60" stroke="#5D4037" stroke-width="12" stroke-linecap="round"/>
+      <!-- Fiddle Leaves (Violin Shaped) -->
+      <!-- Leaf 1 (Top) -->
+      <g filter="url(#shadow)" transform="translate(200, 60)">
+        <path d="M0,0 C-35,-20 -50,-60 -25,-90 C-10,-105 10,-105 25,-90 C50,-60 35,-20 0,0 Z" fill="url(#flLeaf)"/>
+        <path d="M0,0 L0,-85" stroke="#7CB342" stroke-width="3"/>
+      </g>
+      <!-- Leaf 2 (Left High) -->
+      <g filter="url(#shadow)" transform="translate(195, 110) rotate(-45)">
+        <path d="M0,0 C-40,-20 -55,-60 -30,-90 C-10,-105 10,-105 30,-90 C55,-60 40,-20 0,0 Z" fill="url(#flLeaf)"/>
+        <path d="M0,0 L0,-85" stroke="#7CB342" stroke-width="3"/>
+      </g>
+      <!-- Leaf 3 (Right High) -->
+      <g filter="url(#shadow)" transform="translate(200, 130) rotate(45)">
+        <path d="M0,0 C-40,-20 -55,-60 -30,-90 C-10,-105 10,-105 30,-90 C55,-60 40,-20 0,0 Z" fill="url(#flLeaf)"/>
+        <path d="M0,0 L0,-85" stroke="#7CB342" stroke-width="3"/>
+      </g>
+      <!-- Leaf 4 (Left Low) -->
+      <g filter="url(#shadow)" transform="translate(198, 180) rotate(-65)">
+        <path d="M0,0 C-45,-25 -60,-65 -35,-100 C-10,-115 10,-115 35,-100 C60,-65 45,-25 0,0 Z" fill="url(#flLeaf)"/>
+        <path d="M0,0 L0,-95" stroke="#7CB342" stroke-width="3"/>
+      </g>
+      <!-- Leaf 5 (Right Low) -->
+      <g filter="url(#shadow)" transform="translate(202, 200) rotate(60)">
+        <path d="M0,0 C-45,-25 -60,-65 -35,-100 C-10,-115 10,-115 35,-100 C60,-65 45,-25 0,0 Z" fill="url(#flLeaf)"/>
+        <path d="M0,0 L0,-95" stroke="#7CB342" stroke-width="3"/>
+      </g>
+      <!-- Woven Basket Pot -->
+      <g filter="url(#shadow)">
+        <polygon points="140,250 260,250 245,345 155,345" fill="url(#flPot)"/>
+        <ellipse cx="200" cy="250" rx="60" ry="12" fill="#D7CCC8"/>
+        <ellipse cx="200" cy="250" rx="52" ry="8" fill="#3E2723"/>
+        <!-- Basket weaves lines -->
+        <line x1="145" y1="280" x2="255" y2="280" stroke="#795548" stroke-width="3" stroke-dasharray="8,6"/>
+        <line x1="150" y1="310" x2="250" y2="310" stroke="#795548" stroke-width="3" stroke-dasharray="8,6"/>
+      </g>
+    </svg>

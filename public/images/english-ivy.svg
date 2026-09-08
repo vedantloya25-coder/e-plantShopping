@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+      <defs>
+        <linearGradient id="eiBg" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#E8F5E9"/>
+          <stop offset="100%" stop-color="#C8E6C9"/>
+        </linearGradient>
+        <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+          <feDropShadow dx="0" dy="8" stdDeviation="6" flood-opacity="0.15"/>
+        </filter>
+      </defs>
+      <rect width="400" height="400" rx="24" fill="url(#eiBg)"/>
+      <ellipse cx="200" cy="360" rx="80" ry="12" fill="#000000" opacity="0.1"/>
+      <!-- Trailing Vine Stems -->
+      <path d="M200,250 Q130,280 110,360" stroke="#388E3C" stroke-width="3" fill="none"/>
+      <path d="M200,250 Q270,280 290,360" stroke="#388E3C" stroke-width="3" fill="none"/>
+      <path d="M200,250 Q200,300 210,370" stroke="#388E3C" stroke-width="3" fill="none"/>
+      <!-- Ivy Leaves (Star/3-5 lobed shaped) -->
+      <g fill="#1B5E20">
+        <!-- Top bush -->
+        <path d="M190,200 L180,180 L200,165 L220,180 L210,200 Z"/>
+        <path d="M160,220 L145,200 L165,185 L185,200 L175,220 Z"/>
+        <path d="M240,220 L225,200 L245,185 L265,200 L255,220 Z"/>
+        <!-- Trailing left leaves -->
+        <path d="M135,280 L120,265 L140,250 L155,270 Z"/>
+        <path d="M115,320 L100,305 L120,290 L135,310 Z"/>
+        <!-- Trailing right leaves -->
+        <path d="M265,280 L280,265 L260,250 L245,270 Z"/>
+        <path d="M285,320 L300,305 L280,290 L265,310 Z"/>
+        <!-- Center trailing leaves -->
+        <path d="M205,300 L190,285 L210,270 L225,290 Z"/>
+        <path d="M210,340 L195,325 L215,310 L230,330 Z"/>
+      </g>
+      <!-- Pot -->
+      <g filter="url(#shadow)">
+        <polygon points="140,230 260,230 245,315 155,315" fill="#D87A56"/>
+        <ellipse cx="200" cy="230" rx="60" ry="11" fill="#E08E6D"/>
+        <ellipse cx="200" cy="230" rx="52" ry="7" fill="#5D4037"/>
+        <rect x="135" y="222" width="130" height="14" rx="5" fill="#BF613B"/>
+      </g>
+    </svg>

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#061c12"/>
+          <stop offset="50%" stop-color="#0a2e1d"/>
+          <stop offset="100%" stop-color="#12432a"/>
+        </linearGradient>
+        <radialGradient id="sunGlow" cx="60%" cy="30%" r="60%">
+          <stop offset="0%" stop-color="#2ecc71" stop-opacity="0.35"/>
+          <stop offset="50%" stop-color="#27ae60" stop-opacity="0.15"/>
+          <stop offset="100%" stop-color="#0a2e1d" stop-opacity="0"/>
+        </radialGradient>
+        <linearGradient id="goldGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#f1c40f" stop-opacity="0.2"/>
+          <stop offset="100%" stop-color="#e67e22" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+      <!-- Base Background -->
+      <rect width="1920" height="1080" fill="url(#sky)"/>
+      <rect width="1920" height="1080" fill="url(#sunGlow)"/>
+      <rect width="1920" height="1080" fill="url(#goldGlow)"/>
+
+      <!-- Botanical Silhouettes & Greenhouse Architecture -->
+      <!-- Greenhouse glass arches -->
+      <path d="M0,0 Q960,300 1920,0" stroke="#2ecc71" stroke-width="2" stroke-opacity="0.15" fill="none"/>
+      <path d="M0,0 Q960,600 1920,0" stroke="#2ecc71" stroke-width="2" stroke-opacity="0.1" fill="none"/>
+      <line x1="960" y1="0" x2="960" y2="1080" stroke="#2ecc71" stroke-width="2" stroke-opacity="0.12"/>
+      <line x1="480" y1="0" x2="480" y2="1080" stroke="#2ecc71" stroke-width="1.5" stroke-opacity="0.08"/>
+      <line x1="1440" y1="0" x2="1440" y2="1080" stroke="#2ecc71" stroke-width="1.5" stroke-opacity="0.08"/>
+
+      <!-- Giant Monstera / Palm silhouettes along edges -->
+      <!-- Left side foliage -->
+      <g fill="#05190f" opacity="0.7">
+        <path d="M-100,1080 C0,750 150,550 50,400 C150,500 250,750 150,1080 Z"/>
+        <path d="M-50,1080 C100,800 300,700 200,500 C280,680 350,900 250,1080 Z"/>
+        <path d="M0,1080 C200,900 450,850 400,650 C450,800 500,950 400,1080 Z"/>
+      </g>
+      <!-- Right side foliage -->
+      <g fill="#05190f" opacity="0.7">
+        <path d="M2020,1080 C1920,750 1770,550 1870,400 C1770,500 1670,750 1770,1080 Z"/>
+        <path d="M1970,1080 C1820,800 1620,700 1720,500 C1640,680 1570,900 1670,1080 Z"/>
+        <path d="M1920,1080 C1720,900 1470,850 1520,650 C1470,800 1420,950 1520,1080 Z"/>
+      </g>
+      <!-- Subtle particle fireflies -->
+      <circle cx="300" cy="400" r="3" fill="#a8f5c8" opacity="0.6"/>
+      <circle cx="500" cy="250" r="2.5" fill="#fef08a" opacity="0.5"/>
+      <circle cx="850" cy="320" r="3.5" fill="#a8f5c8" opacity="0.7"/>
+      <circle cx="1200" cy="200" r="2" fill="#fef08a" opacity="0.6"/>
+      <circle cx="1550" cy="420" r="3" fill="#a8f5c8" opacity="0.5"/>
+      <circle cx="1700" cy="300" r="2.5" fill="#fef08a" opacity="0.7"/>
+      <circle cx="950" cy="500" r="4" fill="#6ee7b7" opacity="0.4"/>
+    </svg>

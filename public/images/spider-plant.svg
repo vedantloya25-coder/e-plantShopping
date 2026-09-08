@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+      <defs>
+        <linearGradient id="spdBg" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#E8F5E9"/>
+          <stop offset="100%" stop-color="#C8E6C9"/>
+        </linearGradient>
+        <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+          <feDropShadow dx="0" dy="8" stdDeviation="6" flood-opacity="0.15"/>
+        </filter>
+      </defs>
+      <rect width="400" height="400" rx="24" fill="url(#spdBg)"/>
+      <ellipse cx="200" cy="360" rx="80" ry="12" fill="#000000" opacity="0.1"/>
+      <!-- Arching Variegated Blades -->
+      <!-- Left side arches -->
+      <path d="M200,260 Q120,200 60,180 Q130,220 200,260 Z" fill="#4CAF50"/>
+      <path d="M200,260 Q130,170 40,130 Q140,200 200,260 Z" fill="#81C784"/>
+      <path d="M200,260 Q150,130 70,80 Q160,170 200,260 Z" fill="#2E7D32"/>
+      <!-- Right side arches -->
+      <path d="M200,260 Q280,200 340,180 Q270,220 200,260 Z" fill="#4CAF50"/>
+      <path d="M200,260 Q270,170 360,130 Q260,200 200,260 Z" fill="#81C784"/>
+      <path d="M200,260 Q250,130 330,80 Q240,170 200,260 Z" fill="#2E7D32"/>
+      <!-- Upright arches -->
+      <path d="M200,260 Q180,100 150,50 Q190,120 200,260 Z" fill="#66BB6A"/>
+      <path d="M200,260 Q220,100 250,50 Q210,120 200,260 Z" fill="#66BB6A"/>
+      <!-- Hanging baby plantlet stolon -->
+      <path d="M200,250 Q280,260 320,320" stroke="#81C784" stroke-width="2.5" fill="none"/>
+      <!-- Mini Spider Plantlet -->
+      <g transform="translate(320, 320)">
+        <path d="M0,0 Q-15,-10 -25,-5" stroke="#2E7D32" stroke-width="2" fill="none"/>
+        <path d="M0,0 Q15,-10 25,-5" stroke="#2E7D32" stroke-width="2" fill="none"/>
+        <path d="M0,0 Q0,15 5,20" stroke="#4CAF50" stroke-width="2" fill="none"/>
+        <circle cx="0" cy="0" r="3" fill="#FFF59D"/>
+      </g>
+      <!-- Pot -->
+      <g filter="url(#shadow)">
+        <polygon points="140,250 260,250 245,345 155,345" fill="#FFE082"/>
+        <ellipse cx="200" cy="250" rx="60" ry="11" fill="#FFF9C4"/>
+        <ellipse cx="200" cy="250" rx="52" ry="7" fill="#5D4037"/>
+        <rect x="135" y="242" width="130" height="14" rx="5" fill="#FFD54F"/>
+      </g>
+    </svg>

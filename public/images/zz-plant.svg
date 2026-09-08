@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+      <defs>
+        <linearGradient id="zzBg" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#E8F8F5"/>
+          <stop offset="100%" stop-color="#D1F2EB"/>
+        </linearGradient>
+        <linearGradient id="zzLeaf" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#00695C"/>
+          <stop offset="100%" stop-color="#004D40"/>
+        </linearGradient>
+        <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+          <feDropShadow dx="0" dy="8" stdDeviation="6" flood-opacity="0.15"/>
+        </filter>
+      </defs>
+      <rect width="400" height="400" rx="24" fill="url(#zzBg)"/>
+      <ellipse cx="200" cy="365" rx="80" ry="12" fill="#000000" opacity="0.1"/>
+      <!-- Stems with feather leaflets -->
+      <!-- Stem 1 Left -->
+      <path d="M200,260 Q170,160 140,80" stroke="#00796B" stroke-width="6" fill="none"/>
+      <!-- Stem 2 Center -->
+      <path d="M200,260 Q200,150 200,50" stroke="#00796B" stroke-width="7" fill="none"/>
+      <!-- Stem 3 Right -->
+      <path d="M200,260 Q230,160 260,80" stroke="#00796B" stroke-width="6" fill="none"/>
+      <!-- Leaflets -->
+      <!-- Center Stem Leaflets -->
+      <ellipse cx="180" cy="80" rx="16" ry="10" transform="rotate(-30 180 80)" fill="url(#zzLeaf)"/>
+      <ellipse cx="220" cy="90" rx="16" ry="10" transform="rotate(30 220 90)" fill="url(#zzLeaf)"/>
+      <ellipse cx="178" cy="120" rx="18" ry="11" transform="rotate(-35 178 120)" fill="url(#zzLeaf)"/>
+      <ellipse cx="222" cy="130" rx="18" ry="11" transform="rotate(35 222 130)" fill="url(#zzLeaf)"/>
+      <ellipse cx="176" cy="165" rx="20" ry="12" transform="rotate(-40 176 165)" fill="url(#zzLeaf)"/>
+      <ellipse cx="224" cy="175" rx="20" ry="12" transform="rotate(40 224 175)" fill="url(#zzLeaf)"/>
+      <ellipse cx="200" cy="50" rx="15" ry="10" transform="rotate(-90 200 50)" fill="url(#zzLeaf)"/>
+      <!-- Left Stem Leaflets -->
+      <ellipse cx="140" cy="80" rx="14" ry="9" transform="rotate(-60 140 80)" fill="url(#zzLeaf)"/>
+      <ellipse cx="130" cy="115" rx="16" ry="10" transform="rotate(-60 130 115)" fill="url(#zzLeaf)"/>
+      <ellipse cx="165" cy="125" rx="16" ry="10" transform="rotate(0 165 125)" fill="url(#zzLeaf)"/>
+      <ellipse cx="145" cy="155" rx="17" ry="10" transform="rotate(-60 145 155)" fill="url(#zzLeaf)"/>
+      <ellipse cx="180" cy="165" rx="17" ry="10" transform="rotate(0 180 165)" fill="url(#zzLeaf)"/>
+      <!-- Right Stem Leaflets -->
+      <ellipse cx="260" cy="80" rx="14" ry="9" transform="rotate(60 260 80)" fill="url(#zzLeaf)"/>
+      <ellipse cx="270" cy="115" rx="16" ry="10" transform="rotate(60 270 115)" fill="url(#zzLeaf)"/>
+      <ellipse cx="235" cy="125" rx="16" ry="10" transform="rotate(0 235 125)" fill="url(#zzLeaf)"/>
+      <ellipse cx="255" cy="155" rx="17" ry="10" transform="rotate(60 255 155)" fill="url(#zzLeaf)"/>
+      <ellipse cx="220" cy="165" rx="17" ry="10" transform="rotate(0 220 165)" fill="url(#zzLeaf)"/>
+      <!-- Pot -->
+      <g filter="url(#shadow)">
+        <polygon points="145,250 255,250 240,345 160,345" fill="#263238"/>
+        <ellipse cx="200" cy="250" rx="55" ry="10" fill="#37474F"/>
+        <ellipse cx="200" cy="250" rx="48" ry="7" fill="#1C2833"/>
+        <line x1="170" y1="290" x2="230" y2="290" stroke="#FFB74D" stroke-width="3"/>
+      </g>
+    </svg>

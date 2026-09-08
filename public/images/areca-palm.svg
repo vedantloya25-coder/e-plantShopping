@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+      <defs>
+        <linearGradient id="apBg" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#FFFDE7"/>
+          <stop offset="100%" stop-color="#FFF9C4"/>
+        </linearGradient>
+        <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+          <feDropShadow dx="0" dy="8" stdDeviation="6" flood-opacity="0.15"/>
+        </filter>
+      </defs>
+      <rect width="400" height="400" rx="24" fill="url(#apBg)"/>
+      <ellipse cx="200" cy="360" rx="80" ry="12" fill="#000000" opacity="0.1"/>
+      <!-- Golden Arching Stems -->
+      <path d="M200,260 Q170,160 110,80" stroke="#FDD835" stroke-width="5" fill="none"/>
+      <path d="M200,260 Q230,160 290,80" stroke="#FDD835" stroke-width="5" fill="none"/>
+      <path d="M200,260 Q195,140 190,40" stroke="#FDD835" stroke-width="6" fill="none"/>
+      <path d="M200,260 Q140,200 60,160" stroke="#FBC02D" stroke-width="4.5" fill="none"/>
+      <path d="M200,260 Q260,200 340,160" stroke="#FBC02D" stroke-width="4.5" fill="none"/>
+      <!-- Feathery Needle Fronds -->
+      <g stroke="#388E3C" stroke-width="3" stroke-linecap="round">
+        <line x1="110" y1="80" x2="80" y2="70"/>
+        <line x1="125" y1="100" x2="95" y2="90"/>
+        <line x1="140" y1="120" x2="110" y2="110"/>
+        <line x1="155" y1="145" x2="125" y2="135"/>
+        <line x1="290" y1="80" x2="320" y2="70"/>
+        <line x1="275" y1="100" x2="305" y2="90"/>
+        <line x1="260" y1="120" x2="290" y2="110"/>
+        <line x1="245" y1="145" x2="275" y2="135"/>
+        <line x1="190" y1="40" x2="165" y2="30"/>
+        <line x1="190" y1="40" x2="215" y2="30"/>
+        <line x1="192" y1="70" x2="165" y2="60"/>
+        <line x1="192" y1="70" x2="220" y2="60"/>
+      </g>
+      <!-- Pot -->
+      <g filter="url(#shadow)">
+        <polygon points="140,250 260,250 245,345 155,345" fill="#00695C"/>
+        <ellipse cx="200" cy="250" rx="60" ry="11" fill="#00897B"/>
+        <ellipse cx="200" cy="250" rx="52" ry="7" fill="#004D40"/>
+        <rect x="135" y="242" width="130" height="14" rx="5" fill="#4DB6AC"/>
+      </g>
+    </svg>

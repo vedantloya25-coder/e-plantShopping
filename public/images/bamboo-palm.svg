@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+      <defs>
+        <linearGradient id="bpBg" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#E8F8F5"/>
+          <stop offset="100%" stop-color="#D1F2EB"/>
+        </linearGradient>
+        <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+          <feDropShadow dx="0" dy="8" stdDeviation="6" flood-opacity="0.15"/>
+        </filter>
+      </defs>
+      <rect width="400" height="400" rx="24" fill="url(#bpBg)"/>
+      <ellipse cx="200" cy="360" rx="80" ry="12" fill="#000000" opacity="0.1"/>
+      <!-- Bamboo Ringed Canes -->
+      <path d="M190,260 L185,90" stroke="#8D6E63" stroke-width="6" stroke-linecap="round"/>
+      <line x1="184" y1="180" x2="188" y2="180" stroke="#4E342E" stroke-width="3"/>
+      <line x1="185" y1="130" x2="187" y2="130" stroke="#4E342E" stroke-width="3"/>
+      <path d="M210,260 L215,80" stroke="#8D6E63" stroke-width="6" stroke-linecap="round"/>
+      <line x1="212" y1="170" x2="216" y2="170" stroke="#4E342E" stroke-width="3"/>
+      <line x1="213" y1="120" x2="217" y2="120" stroke="#4E342E" stroke-width="3"/>
+      <!-- Palm Foliage Fronds -->
+      <g fill="#2E7D32">
+        <path d="M185,90 Q120,60 70,50 Q125,80 185,90 Z"/>
+        <path d="M185,90 Q140,40 110,20 Q150,60 185,90 Z"/>
+        <path d="M215,80 Q280,50 330,40 Q275,70 215,80 Z"/>
+        <path d="M215,80 Q260,30 290,10 Q250,50 215,80 Z"/>
+        <path d="M187,140 Q110,130 60,130 Q120,150 187,140 Z"/>
+        <path d="M213,130 Q290,120 340,120 Q280,140 213,130 Z"/>
+      </g>
+      <!-- Pot -->
+      <g filter="url(#shadow)">
+        <polygon points="140,250 260,250 245,345 155,345" fill="#455A64"/>
+        <ellipse cx="200" cy="250" rx="60" ry="11" fill="#607D8B"/>
+        <ellipse cx="200" cy="250" rx="52" ry="7" fill="#263238"/>
+        <rect x="135" y="242" width="130" height="14" rx="5" fill="#78909C"/>
+      </g>
+    </svg>

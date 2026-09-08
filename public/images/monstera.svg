@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+      <defs>
+        <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#E8F5E9"/>
+          <stop offset="100%" stop-color="#C8E6C9"/>
+        </linearGradient>
+        <linearGradient id="leafGrad1" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#2E7D32"/>
+          <stop offset="100%" stop-color="#1B5E20"/>
+        </linearGradient>
+        <linearGradient id="leafGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#43A047"/>
+          <stop offset="100%" stop-color="#2E7D32"/>
+        </linearGradient>
+        <linearGradient id="potGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#D87A56"/>
+          <stop offset="50%" stop-color="#E08E6D"/>
+          <stop offset="100%" stop-color="#BF613B"/>
+        </linearGradient>
+        <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+          <feDropShadow dx="0" dy="8" stdDeviation="6" flood-opacity="0.15"/>
+        </filter>
+      </defs>
+      <rect width="400" height="400" rx="24" fill="url(#bg)"/>
+      <ellipse cx="200" cy="360" rx="90" ry="14" fill="#000000" opacity="0.1"/>
+      <!-- Pot -->
+      <g filter="url(#shadow)">
+        <polygon points="140,250 260,250 245,350 155,350" fill="url(#potGrad)"/>
+        <ellipse cx="200" cy="250" rx="60" ry="12" fill="#B25330"/>
+        <ellipse cx="200" cy="250" rx="54" ry="9" fill="#5D4037"/>
+        <!-- Pot pattern/rim -->
+        <rect x="135" y="240" width="130" height="15" rx="6" fill="#E08E6D"/>
+      </g>
+      <!-- Stems -->
+      <path d="M200 250 Q190 180 140 130" stroke="#2E7D32" stroke-width="8" stroke-linecap="round" fill="none"/>
+      <path d="M200 250 Q200 160 200 80" stroke="#2E7D32" stroke-width="9" stroke-linecap="round" fill="none"/>
+      <path d="M200 250 Q215 180 265 140" stroke="#2E7D32" stroke-width="8" stroke-linecap="round" fill="none"/>
+      <path d="M200 250 Q160 200 120 200" stroke="#388E3C" stroke-width="7" stroke-linecap="round" fill="none"/>
+      <path d="M200 250 Q235 210 280 210" stroke="#388E3C" stroke-width="7" stroke-linecap="round" fill="none"/>
+      <!-- Monstera Leaves -->
+      <!-- Center Leaf -->
+      <g filter="url(#shadow)" transform="translate(200, 80) rotate(-5)">
+        <path d="M0,0 C-60,-40 -70,-110 0,-150 C70,-110 60,-40 0,0 Z" fill="url(#leafGrad1)"/>
+        <path d="M0,0 L0,-140" stroke="#81C784" stroke-width="3" stroke-linecap="round"/>
+        <!-- Fenestrations/splits -->
+        <ellipse cx="-25" cy="-70" rx="8" ry="18" fill="url(#bg)" transform="rotate(-30 -25 -70)"/>
+        <ellipse cx="25" cy="-70" rx="8" ry="18" fill="url(#bg)" transform="rotate(30 25 -70)"/>
+        <ellipse cx="-20" cy="-110" rx="6" ry="14" fill="url(#bg)" transform="rotate(-40 -20 -110)"/>
+        <ellipse cx="20" cy="-110" rx="6" ry="14" fill="url(#bg)" transform="rotate(40 20 -110)"/>
+      </g>
+      <!-- Left Leaf -->
+      <g filter="url(#shadow)" transform="translate(140, 130) rotate(-45)">
+        <path d="M0,0 C-50,-30 -55,-90 0,-120 C55,-90 50,-30 0,0 Z" fill="url(#leafGrad2)"/>
+        <path d="M0,0 L0,-110" stroke="#A5D6A7" stroke-width="2.5"/>
+        <ellipse cx="-18" cy="-55" rx="6" ry="14" fill="url(#bg)" transform="rotate(-30 -18 -55)"/>
+        <ellipse cx="18" cy="-55" rx="6" ry="14" fill="url(#bg)" transform="rotate(30 18 -55)"/>
+      </g>
+      <!-- Right Leaf -->
+      <g filter="url(#shadow)" transform="translate(265, 140) rotate(40)">
+        <path d="M0,0 C-50,-30 -55,-90 0,-120 C55,-90 50,-30 0,0 Z" fill="url(#leafGrad1)"/>
+        <path d="M0,0 L0,-110" stroke="#A5D6A7" stroke-width="2.5"/>
+        <ellipse cx="-18" cy="-55" rx="6" ry="14" fill="url(#bg)" transform="rotate(-30 -18 -55)"/>
+        <ellipse cx="18" cy="-55" rx="6" ry="14" fill="url(#bg)" transform="rotate(30 18 -55)"/>
+      </g>
+      <!-- Bottom Left Leaf -->
+      <g filter="url(#shadow)" transform="translate(120, 200) rotate(-70)">
+        <path d="M0,0 C-40,-25 -45,-70 0,-95 C45,-70 40,-25 0,0 Z" fill="url(#leafGrad2)"/>
+        <ellipse cx="-14" cy="-45" rx="5" ry="10" fill="url(#bg)" transform="rotate(-30 -14 -45)"/>
+      </g>
+      <!-- Bottom Right Leaf -->
+      <g filter="url(#shadow)" transform="translate(280, 210) rotate(70)">
+        <path d="M0,0 C-40,-25 -45,-70 0,-95 C45,-70 40,-25 0,0 Z" fill="url(#leafGrad2)"/>
+        <ellipse cx="14" cy="-45" rx="5" ry="10" fill="url(#bg)" transform="rotate(30 14 -45)"/>
+      </g>
+    </svg>
