@@ -23,6 +23,19 @@ import {
   X
 } from 'lucide-react';
 
+// ─── Helper: calculate total cost for a single cart item ────────────────────
+function calculateTotalCost(item) {
+  return (Number(item.price) * item.quantity).toFixed(2);
+}
+
+// ─── Helper: calculate overall cart total amount ────────────────────────────
+function calculateTotalAmount(cartItems) {
+  return cartItems
+    .reduce((total, item) => total + Number(item.price) * item.quantity, 0)
+    .toFixed(2);
+}
+
+// ─── SingleCartItem — renders one row in the cart list ───────────────────────
 export const SingleCartItem = ({ item }) => {
   const dispatch = useDispatch();
 
@@ -34,6 +47,7 @@ export const SingleCartItem = ({ item }) => {
     if (item.quantity > 1) {
       dispatch(decreaseQuantity(item.id));
     } else {
+      // Remove when quantity would drop below 1
       dispatch(removeFromCart(item.id));
     }
   };
@@ -42,7 +56,8 @@ export const SingleCartItem = ({ item }) => {
     dispatch(removeFromCart(item.id));
   };
 
-  const itemTotal = (item.price * item.quantity).toFixed(2);
+  // Use named helper function to compute item total cost
+  const itemTotal = calculateTotalCost(item);
 
   return (
     <div className="cart-item-card" id={`cart-item-${item.id}`}>
@@ -60,7 +75,7 @@ export const SingleCartItem = ({ item }) => {
         <h3 className="cart-item-title">{item.name}</h3>
         <p className="cart-item-unit-price">${Number(item.price).toFixed(2)} each</p>
 
-        {/* Quantity Controls */}
+        {/* Quantity Controls: [-] qty [+] */}
         <div className="cart-quantity-controls">
           <span className="qty-label">Quantity:</span>
           <div className="qty-button-group">
@@ -89,13 +104,17 @@ export const SingleCartItem = ({ item }) => {
         </div>
       </div>
 
-      {/* Subtotal & Delete Action */}
+      {/* Item Subtotal & Delete */}
       <div className="cart-item-actions">
         <div className="cart-item-subtotal-block">
           <span className="subtotal-label">Item Total:</span>
-          <span className="subtotal-amount" id={`item-total-${item.id}`}>${itemTotal}</span>
+          {/* Dynamic item total — updates when quantity changes */}
+          <span className="subtotal-amount" id={`item-total-${item.id}`}>
+            ${itemTotal}
+          </span>
         </div>
 
+        {/* Delete Button — removes item entirely from Redux cart */}
         <button
           type="button"
           className="btn-delete-item"
@@ -111,6 +130,7 @@ export const SingleCartItem = ({ item }) => {
   );
 };
 
+// ─── CartItem — full cart page component ────────────────────────────────────
 const CartItem = ({ item, isRowOnly = false }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -120,7 +140,7 @@ const CartItem = ({ item, isRowOnly = false }) => {
 
   const [showCheckoutModal, setShowCheckoutModal] = useState(false);
 
-  // If used as an individual item row inside an external list
+  // If used as a standalone row (e.g. mapped from external list)
   if (isRowOnly && item) {
     return <SingleCartItem item={item} />;
   }
@@ -129,13 +149,17 @@ const CartItem = ({ item, isRowOnly = false }) => {
     setShowCheckoutModal(true);
   };
 
+  // Continue Shopping — navigate back to /plants
   const handleContinueShopping = () => {
     navigate('/plants');
   };
 
+  // Use named helper to compute overall total amount dynamically
+  const totalAmount = calculateTotalAmount(cartItems);
+
   return (
     <div className="cart-page-wrapper">
-      {/* Reusable Navbar */}
+      {/* Navbar */}
       <Navbar />
 
       <main className="cart-main container">
@@ -164,18 +188,16 @@ const CartItem = ({ item, isRowOnly = false }) => {
               <ShoppingBag size={48} className="empty-cart-icon" />
             </div>
             <h2>Your cart is currently empty</h2>
-            <p>
-              It looks like you haven't added any lovely plants to your collection yet.
-            </p>
+            <p>It looks like you haven't added any lovely plants to your collection yet.</p>
             <Link to="/plants" className="btn-browse-plants">
               <Sparkles size={18} />
               <span>Browse Greenery</span>
             </Link>
           </div>
         ) : (
-          /* Populated Cart Content */
+          /* Cart Items + Order Summary */
           <div className="cart-layout-grid">
-            {/* Left Column: Cart Items List */}
+            {/* Left: Cart Items List */}
             <div className="cart-items-column">
               <div className="cart-items-header">
                 <span className="cart-items-count-text">
@@ -197,12 +219,13 @@ const CartItem = ({ item, isRowOnly = false }) => {
               </div>
             </div>
 
-            {/* Right Column: Order Summary Card */}
+            {/* Right: Order Summary */}
             <div className="cart-summary-column">
               <div className="order-summary-card">
                 <h2 className="summary-title">Order Summary</h2>
 
                 <div className="summary-details">
+                  {/* Total Items — updates dynamically */}
                   <div className="summary-row">
                     <span className="summary-label">Total Items:</span>
                     <span className="summary-value" id="cart-total-items">{totalQuantity}</span>
@@ -220,16 +243,18 @@ const CartItem = ({ item, isRowOnly = false }) => {
 
                   <div className="summary-divider"></div>
 
+                  {/* Total Amount — computed by calculateTotalAmount(), updates dynamically */}
                   <div className="summary-row total-row">
                     <span className="summary-total-label">Total Amount:</span>
                     <span className="summary-total-value" id="cart-total-amount">
-                      ${totalPrice.toFixed(2)}
+                      ${totalAmount}
                     </span>
                   </div>
                 </div>
 
-                {/* Primary Action Buttons */}
+                {/* Actions */}
                 <div className="summary-actions">
+                  {/* Checkout Button */}
                   <button
                     type="button"
                     className="btn-checkout"
@@ -240,6 +265,7 @@ const CartItem = ({ item, isRowOnly = false }) => {
                     <span>Checkout</span>
                   </button>
 
+                  {/* Continue Shopping Button — navigates to /plants */}
                   <button
                     type="button"
                     className="btn-continue-shopping"
@@ -251,7 +277,6 @@ const CartItem = ({ item, isRowOnly = false }) => {
                   </button>
                 </div>
 
-                {/* Secure Badge */}
                 <div className="summary-guarantee">
                   <CheckCircle2 size={16} className="guarantee-icon" />
                   <span>30-Day Healthy Plant Guarantee</span>
@@ -262,7 +287,7 @@ const CartItem = ({ item, isRowOnly = false }) => {
         )}
       </main>
 
-      {/* "Checkout Coming Soon!" Modal Dialog */}
+      {/* "Checkout Coming Soon!" Modal */}
       {showCheckoutModal && (
         <div className="modal-overlay" onClick={() => setShowCheckoutModal(false)}>
           <div
@@ -290,12 +315,14 @@ const CartItem = ({ item, isRowOnly = false }) => {
             </h3>
 
             <p className="modal-message">
-              Thank you for shopping at Paradise Nursery! Our secure payment gateway is currently being prepared for our upcoming harvest launch.
+              Thank you for shopping at Paradise Nursery! Our secure payment gateway is currently
+              being prepared for our upcoming harvest launch.
             </p>
 
+            {/* Summary box with dynamic totals */}
             <div className="modal-summary-box">
               <span>Total Items: <strong>{totalQuantity}</strong></span>
-              <span>Total Amount: <strong>${totalPrice.toFixed(2)}</strong></span>
+              <span>Total Amount: <strong>${totalAmount}</strong></span>
             </div>
 
             <button

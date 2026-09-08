@@ -14,7 +14,7 @@ import {
 
 const AboutUs = () => {
   return (
-    <div className="about-page-wrapper">
+    <div className="about-us-container about-page-wrapper">
       <Navbar />
 
       <main className="about-main container">
